@@ -9,12 +9,14 @@ class Program
         bool correct = false;
         bool playAgain = false;
         
-        int number = Random.Shared.Next(1, 101);
-        int attempts = 0;
+        
         
         
         while (! playAgain)
         {
+        correct = false;
+        int number = Random.Shared.Next(1, 101);
+        int attempts = 0;
             while (! correct)
             {
         
@@ -40,7 +42,7 @@ class Program
             }
             Console.Write("Would you like to play again? (y/n) ");
             string again = Console.ReadLine();
-            if (again == "y")
+            if (again != "y")
                 playAgain = true;
         }
     }
