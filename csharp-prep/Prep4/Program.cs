@@ -16,7 +16,7 @@ class Program
         List <int> numbers = new List<int>();
         while (number != 0)
         {
-        Console.Write("Please enter a number");
+        Console.Write("Please enter a number ");
         string input = Console.ReadLine();
         number = int.Parse(input);
         if (largest < number)
@@ -39,6 +39,9 @@ class Program
         Console.WriteLine($"The largest number is {largest}");
         Console.WriteLine($"The nearest positive to zero is {nearzero}");
         Console.WriteLine($"The ordered list is ");
-        
+        List<int> sortedAsc = numbers.Order().ToList();
+        foreach (int write in sortedAsc)
+            if (write != 0)
+            Console.WriteLine(write);
     }
 }
