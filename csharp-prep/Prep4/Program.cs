@@ -2,6 +2,8 @@ using System;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
+using System.Runtime.Versioning;
+using System.Linq;
 
 class Program
 {
@@ -10,6 +12,7 @@ class Program
         int number = 4;
         int sum = 0;
         int largest = 0;
+        int nearzero = 100;
         List <int> numbers = new List<int>();
         while (number != 0)
         {
@@ -19,6 +22,10 @@ class Program
         if (largest < number)
             {
                 largest = number;
+            }
+        if (number > 0 & number < nearzero)
+            {
+                nearzero = number;
             }
         numbers.Add(number);
         }
@@ -30,5 +37,8 @@ class Program
         Console.WriteLine($"The sum is {sum}");
         Console.WriteLine($"the average is {average}");
         Console.WriteLine($"The largest number is {largest}");
+        Console.WriteLine($"The nearest positive to zero is {nearzero}");
+        Console.WriteLine($"The ordered list is ");
+        
     }
 }
