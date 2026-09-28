@@ -3,8 +3,20 @@ using System.Runtime.CompilerServices;
 
 class Program
 {
+    static double AddNumbers(double x, int y)
+    {
+        return x + y;
+    }
+
+    static void DisplayGreeting(string name)
+    {
+        Console.WriteLine($"Welcome {name}, pleased to meet you");
+    }
     static void Main(string[] args)
     {
+        DisplayGreeting("Tony");
+        double answer = AddNumbers(12.234, 10);
+        Console.Write(answer);
         // bool done = false;
 
         // while (! done)
@@ -35,10 +47,5 @@ class Program
         //     Console.Write($"{name} ");
         // }
 
-        static double AddNumbers(double x, int y)
-        {
-            return x + y;
-        }
-        Console.Write(AddNumbers(4.5, 5));
     }
 }
