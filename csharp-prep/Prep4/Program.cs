@@ -11,6 +11,7 @@ class Program
         int sum = 0;
         List <int> numbers = new List<int>();
         while (number != 0)
+        if (number != 0)
         {
         Console.Write("Please enter a number");
         string input = Console.ReadLine();
@@ -19,8 +20,10 @@ class Program
         }
         foreach (int numero in numbers)
         {
-            sum = sum + numero;
+            sum = sum + (numero);
         }
+        int average = sum/(numbers.Count-1);
         Console.WriteLine(sum);
+        Console.WriteLine(average);
     }
 }
