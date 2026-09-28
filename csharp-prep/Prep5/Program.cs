@@ -49,8 +49,8 @@ class Program
     static void Main(string[] args)
     {
         Displaywelcome();
-        Promptuserage();
         string name = Promptusername();
+        Promptuserage();
         int usernumber = Promptusernumber();
         int year;
         promptuserbrith(out year);
