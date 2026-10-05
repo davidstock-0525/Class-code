@@ -1,9 +1,12 @@
 using System;
+using Develop02.obj;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop02 World!");
+       Menu myMenu = new Menu();
+
+       int response = myMenu.ProcessMenu();
     }
 }
