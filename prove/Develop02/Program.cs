@@ -9,6 +9,8 @@ class Program
 
        int response = 0;
 
+       JournalEntry Newentry = new JournalEntry();
+
        while (response != 5)
         {
             response = myMenu.ProcessMenu();
@@ -16,9 +18,11 @@ class Program
             {
                 case 1:
                     Console.WriteLine("create");
+                    Newentry.CreateJournalEntry();
                     break;
                 case 2:
                     Console.WriteLine("Display");
+                    Newentry.DisplayEntry();
                     break;
                 case 3:
                     Console.WriteLine("Save");
