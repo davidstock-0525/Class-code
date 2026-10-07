@@ -1,6 +1,6 @@
-class JournalEntry
+public class JournalEntry
 {
-    public DateTime _date;
+    public string _date;
 
     public string _prompt;
 
@@ -15,11 +15,15 @@ class JournalEntry
 
     public void CreateJournalEntry()
     {
-        _date = DateTime.Now;
+        DateTime Date = DateTime.Now;
+        _date = Date.ToString();
         _prompt = "How was your day? ";
 
         Console.Write($"{_prompt}");
 
         _response = Console.ReadLine();
+
     }
+
+    
 }
