@@ -1,6 +1,6 @@
 class JournalEntry
 {
-    public string _date;
+    public DateTime _date;
 
     public string _prompt;
 
@@ -15,7 +15,7 @@ class JournalEntry
 
     public void CreateJournalEntry()
     {
-        _date = "october 7, 2026";
+        _date = DateTime.Now;
         _prompt = "How was your day? ";
 
         Console.Write($"{_prompt}");
