@@ -13,7 +13,7 @@ public class JournalEntry
         Console.WriteLine($"{_response}, ");
     }
 
-    public JournalEntry CreateJournalEntry()
+    public JournalEntry CreateJournalEntry(string date = "", string question = "", string entryText = "")
     {
         DateTime Date = DateTime.Now;
         _date = Date.ToString();
