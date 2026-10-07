@@ -13,7 +13,7 @@ public class JournalEntry
         Console.WriteLine($"{_response}, ");
     }
 
-    public void CreateJournalEntry()
+    public JournalEntry CreateJournalEntry()
     {
         DateTime Date = DateTime.Now;
         _date = Date.ToString();
@@ -22,6 +22,7 @@ public class JournalEntry
         Console.Write($"{_prompt}");
 
         _response = Console.ReadLine();
+        return this;
 
     }
 
