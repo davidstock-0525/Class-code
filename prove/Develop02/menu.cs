@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Develop02.obj;
-class Menu
+public class Menu
 {
     public int ProcessMenu()
     {
