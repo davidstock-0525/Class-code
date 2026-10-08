@@ -11,6 +11,7 @@ public class Menu
         while (response < 1 || response > 5)
         {
             Console.WriteLine("Welcome to the journal Program");
+            Console.WriteLine("This program can make entries for now, or for the future");
             Console.WriteLine("Create, display, Save, Read Journal entry");
             Console.WriteLine("1. Create new Journal entry");
             Console.WriteLine("2. Display Journal entry");
