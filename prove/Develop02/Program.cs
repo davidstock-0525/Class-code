@@ -23,7 +23,7 @@ class Program
                     break;
                 case 2:
                     Console.WriteLine("Display");
-                    Newentry.DisplayEntry();
+                    Journal.DisplayLatest();
                     break;
                 case 3:
                     Console.WriteLine("Save");

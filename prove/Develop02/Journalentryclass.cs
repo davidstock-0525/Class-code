@@ -1,30 +1,24 @@
 public class JournalEntry
 {
     public string _date;
-
     public string _prompt;
-
     public string _response;
 
     public void DisplayEntry()
     {
-        Console.Write($"{_date}, ");
-        Console.Write($"{_prompt}, ");
-        Console.WriteLine($"{_response}, ");
+        Console.WriteLine($"{_date}, {_prompt}, {_response}");
     }
 
-    public JournalEntry CreateJournalEntry(string date = "", string question = "", string entryText = "")
+    public void CreateJournalEntry()
     {
-        DateTime Date = DateTime.Now;
-        _date = Date.ToString();
+        _date = DateTime.Now.ToString();
         _prompt = "How was your day? ";
-
-        Console.Write($"{_prompt}");
-
+        Console.Write(_prompt);
         _response = Console.ReadLine();
-        return this;
-
     }
 
-    
+    public string ToFileString()
+    {
+        return $"{_date}#{_prompt}#{_response}";
+    }
 }
