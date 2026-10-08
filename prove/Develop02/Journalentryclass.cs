@@ -11,8 +11,21 @@ public class JournalEntry
 
     public void CreateJournalEntry()
     {
+        List<string> prompts = new List<string>()
+        {
+            "How was your day?",
+            "What was your favortie quoute?",
+            "What made you angry?",
+            "What did you learn?",
+            "What are you looking forward too?"
+        };
+
+         Random random = new Random();
+        int index = random.Next(prompts.Count);
+;
+        string input = prompts[index];
         _date = DateTime.Now.ToString();
-        _prompt = "How was your day? ";
+        _prompt = input;
         Console.Write(_prompt);
         _response = Console.ReadLine();
     }
