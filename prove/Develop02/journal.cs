@@ -49,6 +49,8 @@ public class Journal
             entry._prompt = parts[1];
             entry._response = parts[2];
             _entries.Add(entry);
+
+            entry.DisplayEntry();
         }
     }
 }
