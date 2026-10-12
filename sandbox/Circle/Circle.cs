@@ -5,6 +5,16 @@ class Circle
 {
     private double _radius;
 
+    public Circle()
+    {
+        _radius = 1.0;
+    }
+
+    public Circle(double radius)
+    {
+        _radius = radius;
+    }
+
 
     public double GetArea()
     {

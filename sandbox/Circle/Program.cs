@@ -8,8 +8,7 @@ class Program
   {
     Console.WriteLine("hello circle");
 
-    Circle myCircle = new Circle();
-    myCircle.SetRadius(10);
+    Circle myCircle = new Circle(10);
 
     double area = myCircle.GetArea();
     Console.WriteLine(area);
