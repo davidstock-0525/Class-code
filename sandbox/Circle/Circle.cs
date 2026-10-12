@@ -23,5 +23,9 @@ class Circle
             _radius = 1.0;
             Console.WriteLine("Error, Radius must have positive value");
         }
+        else
+        {
+            _radius = radius;
+        }
     }
 }

@@ -12,5 +12,6 @@ class Program
     myCircle.SetRadius(10);
 
     double area = myCircle.GetArea();
+    Console.WriteLine(area);
   }
 }
