@@ -9,7 +9,7 @@ class Program
     Console.WriteLine("hello circle");
 
     Circle myCircle = new Circle();
-    myCircle._radius = 10;
+    myCircle.SetRadius(10);
 
     double area = myCircle.GetArea();
   }
