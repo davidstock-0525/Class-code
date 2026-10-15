@@ -29,7 +29,7 @@ class Program
             int bottomNumber = random.Next(1,11);
             n5.setNumerator(topNumber);
             n5.setDenmoninator(bottomNumber);
-            Console.Write($"Fraction {i + 1}");
+            Console.Write($"Fraction {i + 1}  ");
             n5.getStringfrac();
             n5.getDecimalVaule();
         }
