@@ -58,7 +58,7 @@ public class Fraction
 
     public void getDecimalVaule()
     {
-        double result = _topNumber / _bottomNumber;
+        double result = (double)_topNumber / _bottomNumber;
         Console.WriteLine(result);
     }
 }
