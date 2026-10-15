@@ -8,19 +8,19 @@ public class Fraction
     private int _topNumber;
     private int _bottomNumber;
 
-    public void fraction()
+    public Fraction()
     {
         _topNumber = 1;
         _bottomNumber = 1;
     }
 
-    public void fraction(int numerator)
+    public Fraction(int numerator)
     {
         _topNumber = numerator;
         _bottomNumber = 1;
     }
 
-    public void fraction(int numerator, int denominator)
+    public Fraction(int numerator, int denominator)
     {
         _topNumber = numerator;
         _bottomNumber = denominator;
@@ -51,13 +51,14 @@ public class Fraction
         }
     }
 
-    public void getStringfrac(Fraction fraction)
+    public void getStringfrac()
     {
         Console.WriteLine($"{_topNumber}/{_bottomNumber}");
     }
 
-    public void getDecimalVaule(Fraction fraction)
+    public void getDecimalVaule()
     {
         double result = _topNumber / _bottomNumber;
+        Console.WriteLine(result);
     }
 }
