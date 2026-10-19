@@ -6,7 +6,8 @@ class Program
     static void Main(string[] args)
     {
         Word myWord = new Word("bubba");
-        myWord.display();
+        myWord.printword();
         myWord.hide();
+        myWord.printblanks();
     }
 }
