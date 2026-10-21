@@ -9,5 +9,8 @@ class Program
         myWord.printword();
         myWord.hide();
         myWord.printblanks();
+
+        Scripture myScripture = new Scripture("moses", 1, 39, "Behold, this is my work and my glory");
+        myScripture.showScripture();
     }
 }
