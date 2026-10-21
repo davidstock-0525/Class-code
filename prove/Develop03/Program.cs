@@ -54,8 +54,10 @@ class Program
         while (quit != "q")
         {
             Console.Clear();
+            Reference myRef = new Reference(myScripture);
+            myRef.printRef();
             myScripture.showScripture();
-            Console.ReadLine();
+            quit = Console.ReadLine();
         }
             
     }

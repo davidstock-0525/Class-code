@@ -11,14 +11,29 @@ public class Reference
 
     public string BuildRef(Scripture Scripture)
     {
-        string reference = ($"{Scripture.getBook()}{Scripture.getChapter().ToString()}:{Scripture.getVerse()}{Scripture.getStartVerse}-{Scripture.getEndVerse()}");
-        return reference;
+        int runversion1 = Scripture.getVerse();
+        if (runversion1 == 0)
+        {
+            string reference = ($"{Scripture.getBook()}{Scripture.getChapter().ToString()}:{Scripture.getStartVerse}-{Scripture.getEndVerse()}");
+            return reference;
+        }
+        else
+        {
+           string reference = ($"{Scripture.getBook()}{Scripture.getChapter().ToString()}:{Scripture.getVerse}");
+            return reference; 
+        }
+            
     }
 
     public Reference(Scripture scripture)
     {
         _startingPoint = scripture;
         _fullReference = BuildRef(scripture);
+    }
+
+    public void printRef()
+    {
+        Console.WriteLine(_fullReference);
     }
     
 

@@ -13,15 +13,21 @@ public class Scripture
     private int _startverse;
 
     private int _endverse;
-    private string _text;
 
     public Scripture(string Bookname, int chapter, int verse, string text)
     {
+        _book = Bookname;
+        _chapter = chapter;
+        _verse = verse;
         _words = convertToWords(text);
     }
-    public Scripture(string BookName, int chapter, int startverse, int endverses, string text)
+    public Scripture(string Bookname, int chapter, int startverse, int endverse, string text)
     {
-        
+        _book = Bookname;
+        _chapter = chapter;
+        _startverse = startverse;
+        _endverse = endverse;
+        _words = convertToWords(text);
     }
 
     public void showScripture()
