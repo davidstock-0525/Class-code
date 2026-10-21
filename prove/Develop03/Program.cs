@@ -57,6 +57,7 @@ class Program
             Reference myRef = new Reference(myScripture);
             myRef.printRef();
             myScripture.showScripture();
+            myScripture.Pickandhide();
             quit = Console.ReadLine();
         }
             

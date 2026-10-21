@@ -91,7 +91,14 @@ public class Scripture
             Random random = new Random();
             int index = random.Next(_words.Count);
             Word selectedWord = _words[index];
-            selectedWord.hide();
+            if (selectedWord.IsHidden() == false)
+            {
+                selectedWord.hide();
+            }
+            else
+            {
+                i = i - 1;
+            }
         }
     }
 }
