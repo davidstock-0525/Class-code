@@ -14,12 +14,12 @@ public class Reference
         int runversion1 = Scripture.getVerse();
         if (runversion1 == 0)
         {
-            string reference = ($"{Scripture.getBook()}{Scripture.getChapter().ToString()}:{Scripture.getStartVerse().ToString()}-{Scripture.getEndVerse().ToString()}");
+            string reference = ($"{Scripture.getBook()} {Scripture.getChapter().ToString()}:{Scripture.getStartVerse().ToString()}-{Scripture.getEndVerse().ToString()}");
             return reference;
         }
         else
         {
-           string reference = ($"{Scripture.getBook()}{Scripture.getChapter().ToString()}:{Scripture.getVerse().ToString()}");
+           string reference = ($"{Scripture.getBook()} {Scripture.getChapter().ToString()}:{Scripture.getVerse().ToString()}");
             return reference; 
         }
             

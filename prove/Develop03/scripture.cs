@@ -83,4 +83,15 @@ public class Scripture
     {
         return _endverse;
     }
+
+    public void Pickandhide()
+    {
+        for (int i = 0; i < 7; i++)
+        {
+            Random random = new Random();
+            int index = random.Next(_words.Count);
+            Word selectedWord = _words[index];
+            selectedWord.hide();
+        }
+    }
 }
