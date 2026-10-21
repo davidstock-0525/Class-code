@@ -19,7 +19,7 @@ public class Word
         _length = word.Length;
     }
 
-    public void hide()
+    public void Hide()
     {
         _isHidden = true;
     }
@@ -28,12 +28,12 @@ public class Word
         return _isHidden;
     }
 
-    public void printword()
+    public void PrintWord()
     {
         Console.Write($"{_word} ");
     }
 
-    public void printblanks()
+    public void PrintBlanks()
     {
         for (int i = 0; i < _length; i++)
         {

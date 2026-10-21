@@ -10,43 +10,43 @@ public class Scripture
     private int _chapter;
     private int _verse;
 
-    private int _startverse;
+    private int _startVerse;
 
-    private int _endverse;
+    private int _endVerse;
 
     public Scripture(string Bookname, int chapter, int verse, string text)
     {
         _book = Bookname;
         _chapter = chapter;
         _verse = verse;
-        _words = convertToWords(text);
+        _words = ConvertToWords(text);
     }
     public Scripture(string Bookname, int chapter, int startverse, int endverse, string text)
     {
         _book = Bookname;
         _chapter = chapter;
-        _startverse = startverse;
-        _endverse = endverse;
-        _words = convertToWords(text);
+        _startVerse = startverse;
+        _endVerse = endverse;
+        _words = ConvertToWords(text);
     }
 
-    public void showScripture()
+    public void ShowScripture()
     {
         foreach (Word word in _words)
         {
             bool hidden = word.IsHidden();
             if (hidden == false)
             {
-                word.printword();
+                word.PrintWord();
             }
             else
             {
-                word.printblanks();
+                word.PrintBlanks();
             }
         }
     }
 
-    private List<Word> convertToWords(string text)
+    private List<Word> ConvertToWords(string text)
     {
         List<Word> tempWords = new List<Word>();
         string[] words = text.Split(' ');
@@ -59,32 +59,32 @@ public class Scripture
         return tempWords;
     }
 
-    public string getBook()
+    public string GetBook()
     {
         return _book;
     }
 
-    public int getChapter()
+    public int GetChapter()
     {
         return _chapter;
     }
 
-    public int getVerse()
+    public int GetVerse()
     {
         return _verse;
     }
 
-    public int getStartVerse()
+    public int GetStartVerse()
     {
-        return _startverse;
+        return _startVerse;
     }
 
-    public int getEndVerse()
+    public int GetEndVerse()
     {
-        return _endverse;
+        return _endVerse;
     }
 
-    public void Pickandhide()
+    public void PickandHide()
     {
         for (int i = 0; i < 7; i++)
         {
@@ -93,12 +93,25 @@ public class Scripture
             Word selectedWord = _words[index];
             if (selectedWord.IsHidden() == false)
             {
-                selectedWord.hide();
+                selectedWord.Hide();
             }
             else
             {
                 i = i - 1;
             }
         }
+    }
+
+    public int EndProgram()
+    {
+        int killswitch = 1;
+        foreach (Word word in _words)
+        {
+            if (word.IsHidden() == false)
+            {
+                killswitch = 0;
+            }
+        }
+        return killswitch;
     }
 }

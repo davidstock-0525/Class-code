@@ -11,15 +11,15 @@ public class Reference
 
     public string BuildRef(Scripture Scripture)
     {
-        int runversion1 = Scripture.getVerse();
+        int runversion1 = Scripture.GetVerse();
         if (runversion1 == 0)
         {
-            string reference = ($"{Scripture.getBook()} {Scripture.getChapter().ToString()}:{Scripture.getStartVerse().ToString()}-{Scripture.getEndVerse().ToString()}");
+            string reference = ($"{Scripture.GetBook()} {Scripture.GetChapter().ToString()}:{Scripture.GetStartVerse().ToString()}-{Scripture.GetEndVerse().ToString()}");
             return reference;
         }
         else
         {
-           string reference = ($"{Scripture.getBook()} {Scripture.getChapter().ToString()}:{Scripture.getVerse().ToString()}");
+           string reference = ($"{Scripture.GetBook()} {Scripture.GetChapter().ToString()}:{Scripture.GetVerse().ToString()}");
             return reference; 
         }
             

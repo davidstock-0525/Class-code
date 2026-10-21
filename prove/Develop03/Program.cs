@@ -56,9 +56,14 @@ class Program
             Console.Clear();
             Reference myRef = new Reference(myScripture);
             myRef.printRef();
-            myScripture.showScripture();
-            myScripture.Pickandhide();
+            myScripture.ShowScripture();
+            myScripture.PickandHide();
             quit = Console.ReadLine();
+            int EndProgram = myScripture.EndProgram();
+            if (EndProgram == 1)
+            {
+                quit = "q";
+            }
         }
             
     }
