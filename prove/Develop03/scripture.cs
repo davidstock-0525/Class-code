@@ -1,11 +1,19 @@
 using System;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Develop03;
 
 public class Scripture
 {
     private List<Word> _words;
-    // Add scripture
+    private string _book;
+    private int _chapter;
+    private int _verse;
+
+    private int _startverse;
+
+    private int _endverse;
+    private string _text;
 
     public Scripture(string Bookname, int chapter, int verse, string text)
     {
@@ -44,5 +52,29 @@ public class Scripture
 
         return tempWords;
     }
-    
+
+    public string getBook()
+    {
+        return _book;
+    }
+
+    public int getChapter()
+    {
+        return _chapter;
+    }
+
+    public int getVerse()
+    {
+        return _verse;
+    }
+
+    public int getStartVerse()
+    {
+        return _startverse;
+    }
+
+    public int getEndVerse()
+    {
+        return _endverse;
+    }
 }
