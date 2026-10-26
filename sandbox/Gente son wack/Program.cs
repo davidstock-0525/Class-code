@@ -2,6 +2,7 @@
 {
     static void Main()
     {
-        Console.WriteLine("bob");
+        Person cop = new Person("Ryan", "stiller", 32, 210);
+        cop.Displayinfo();
     }
 }
