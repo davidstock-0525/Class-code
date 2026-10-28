@@ -12,5 +12,16 @@
         Doctor myDoctor = new Doctor("billy", "pain", 20, 150, "knife");
 
         Console.WriteLine(myDoctor.getdoctorinfo());
+
+        List<Person> myPeople = new List<Person>();
+
+        myPeople.Add(myDoctor);
+        myPeople.Add(myPolice);
+        myPeople.Add(myPerson);
+
+        foreach (Person person in myPeople)
+        {
+            Console.WriteLine(person.getinfo());
+        }
     }
 }
