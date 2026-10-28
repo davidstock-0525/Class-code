@@ -7,4 +7,10 @@ class Police: Person
     {
         _weapons = weapons;
     }
+
+    public string getpoliceinfo()
+    {
+        string info = ($"{_weapons},{getinfo()}");
+        return info;
+    }
 }
