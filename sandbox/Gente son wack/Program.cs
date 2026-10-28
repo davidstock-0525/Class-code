@@ -8,5 +8,9 @@
         Police myPolice = new Police("Lance", "Bob", 34, 186, "taser");
 
         Console.WriteLine(myPolice.getpoliceinfo());
+
+        Doctor myDoctor = new Doctor("billy", "pain", 20, 150, "knife");
+
+        Console.WriteLine(myDoctor.getdoctorinfo());
     }
 }
