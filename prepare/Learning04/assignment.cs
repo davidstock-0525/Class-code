@@ -11,7 +11,7 @@ class Assignment
 
     public string getsummary()
     {
-        string summary = ($"{_studentName},{_topic}");
+        string summary = ($"{_studentName} - {_topic}");
         return summary;
     }
 }

@@ -12,7 +12,7 @@ class Math:Assignment
 
     public string GetHomeworkList()
     {
-        string homeworkList = ($"{_textBookSection}: {__problems}");
+        string homeworkList = ($"Section {_textBookSection} problems {__problems}");
         return homeworkList;
     }
     

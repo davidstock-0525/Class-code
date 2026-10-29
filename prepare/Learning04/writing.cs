@@ -7,7 +7,7 @@ class Writing:Assignment
     public Writing(string title, string studentName, string topic)
     : base (studentName, topic)
     {
-        title = _title;
+        _title = title;
     }
 
     public string getWritinginformation()
