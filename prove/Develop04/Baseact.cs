@@ -16,4 +16,21 @@ class Baseactivity
         } 
         Console.CursorVisible = true;
     }
+
+    public void displayspinnermessage(string message, int seconds)
+    {
+        Console.CursorVisible = false;
+        Console.Clear();
+        Console.Write($"{message} ");
+        for (int i=0; i<seconds; i++)
+        {
+            Console.Write("+");
+            Thread.Sleep(200);
+            Console.Write("\b");
+            Console.Write("-");
+            Thread.Sleep(200);
+            Console.Write("\b");
+        }
+        Console.CursorVisible = true;
+    }
 }
