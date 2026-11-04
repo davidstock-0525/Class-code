@@ -1,8 +1,15 @@
 class Baseactivity
 {
-    public Baseactivity()
+    string _name;
+    string _welcomeMessage;
+    int _duration;
+    string _endmessage;
+    public Baseactivity(string name, string welcomeMessage, int duration, string endMessage)
     {
-        //make constructer
+        _name = name;
+        _welcomeMessage = welcomeMessage;
+        _duration = duration;
+        _endmessage = endMessage;
     }
 
     public void RunCountDownMessage(string message, int seconds)
@@ -33,5 +40,10 @@ class Baseactivity
             Console.Write("\b");
         }
         Console.CursorVisible = true;
+    }
+
+    public void setTimer(int timer)
+    {
+        _duration = timer;
     }
 }
