@@ -2,16 +2,24 @@ class Baseactivity
 {
     private string _name;
     private int _duration;
+    private string _description;
+
+    private DateTime _endTime;
     
-    public Baseactivity(string name)
+    public Baseactivity(string name, string description)
     {
         _name = name;
     }
 
-    public void RunCountDownMessage(string message)
+    public void StartActivity()
+    {
+        _endTime = DateTime.Now.AddSeconds(_duration);
+    }
+
+    public void RunCountDownMessage(string message, int duration)
     {
         Console.CursorVisible = false;
-        for(int i=_duration; i>=1; i--)
+        for(int i=duration; i>=1; i--)
         {
             Console.Clear();
             Console.Write($"{i} - {message}");
@@ -20,32 +28,61 @@ class Baseactivity
         Console.CursorVisible = true;
     }
 
-    public void displayspinnermessage(string message, int seconds)
+    public void displayspinnermessage(string message, int duration)
     {
         Console.CursorVisible = false;
         Console.Clear();
-        Console.Write($"{message} ");
-        DateTime endTime = DateTime.Now.AddSeconds(seconds);
-        while (DateTime.Now < endTime)
+        Console.Write($"{message}");
+        DateTime localendTime = DateTime.Now.AddSeconds(duration);
+        while (DateTime.Now < localendTime)
         {
-            Console.Write("+");
+            Console.Write("|");
+            Thread.Sleep(200);
+            Console.Write("\b");
+            Console.Write("/");
             Thread.Sleep(200);
             Console.Write("\b");
             Console.Write("-");
             Thread.Sleep(200);
             Console.Write("\b");
+            Console.Write("\\");
+            Thread.Sleep(200);
+            Console.Write("\b");
+            Console.Write("|");
+            Thread.Sleep(200);
+            Console.Write("\b");
+            Console.Write("/");
+
         }
         Console.CursorVisible = true;
     }
 
     public void setDuration()
     {
-        Console.WriteLine("How long should this last?");
+        Console.Write("How many seconds should activity this last?");
         _duration = int.Parse(Console.ReadLine());
+    }
+
+    public bool timerHasExpried()
+    {
+        if (DateTime.Now > _endTime)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void WelcomeMessage()
     {
         Console.WriteLine($"Welcome to {_name} activity");
+    }
+
+    public void displayendmessage()
+    {
+        Console.Clear();
+        Console.WriteLine($"Congrats, you completed {_duration} seconds of {_name} activity");
     }
 }
