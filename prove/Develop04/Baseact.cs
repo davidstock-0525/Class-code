@@ -22,7 +22,8 @@ class Baseactivity
         Console.CursorVisible = false;
         Console.Clear();
         Console.Write($"{message} ");
-        for (int i=0; i<seconds; i++)
+        DateTime endTime = DateTime.Now.AddSeconds(seconds);
+        while (DateTime.Now < endTime)
         {
             Console.Write("+");
             Thread.Sleep(200);
