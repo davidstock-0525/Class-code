@@ -5,8 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Baseactivity activity = new Baseactivity("Based", "hello", 5, "die");
-        activity.RunCountDownMessage("hello", 5);
+        Baseactivity activity = new Baseactivity("Based");
+        activity.RunCountDownMessage("hello");
         activity.displayspinnermessage("Well done", 10);
     }
 }

@@ -1,21 +1,17 @@
 class Baseactivity
 {
-    string _name;
-    string _welcomeMessage;
-    int _duration;
-    string _endmessage;
-    public Baseactivity(string name, string welcomeMessage, int duration, string endMessage)
+    private string _name;
+    private int _duration;
+    
+    public Baseactivity(string name)
     {
         _name = name;
-        _welcomeMessage = welcomeMessage;
-        _duration = duration;
-        _endmessage = endMessage;
     }
 
-    public void RunCountDownMessage(string message, int seconds)
+    public void RunCountDownMessage(string message)
     {
         Console.CursorVisible = false;
-        for(int i=seconds; i>=1; i--)
+        for(int i=_duration; i>=1; i--)
         {
             Console.Clear();
             Console.Write($"{i} - {message}");
@@ -42,8 +38,14 @@ class Baseactivity
         Console.CursorVisible = true;
     }
 
-    public void setTimer(int timer)
+    public void setDuration()
     {
-        _duration = timer;
+        Console.WriteLine("How long should this last?");
+        _duration = int.Parse(Console.ReadLine());
+    }
+
+    public void WelcomeMessage()
+    {
+        Console.WriteLine($"Welcome to {_name} activity");
     }
 }
