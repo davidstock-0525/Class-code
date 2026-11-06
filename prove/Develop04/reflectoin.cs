@@ -14,7 +14,7 @@ class Reflection:Baseactivity
     "What could you learn from this experience that applies to other situations?",
     "What did you learn about yourself through this experience?","How can you keep this experience in mind in the future?"};
 
-    public Reflection(string name = "Reflection", string description = "Spend some time thinking of an imporant moment in your life")
+    public Reflection(string name, string description )
     :base(name, description)
     {
         Random random = new Random();
