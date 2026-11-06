@@ -30,7 +30,13 @@ class Reflection:Baseactivity
         WelcomeMessage();
         setDuration();
         RunCountDownMessage(_prompt1, 5);
-        displayspinnermessage(_prompt2, getDuration());
+        while (timerHasExpried() == false)
+            displayspinnermessage(_prompt2, 7);
+            Random random2 = new Random();
+            int randomnumber2 = random2.Next(_propts2list.Count);
+            _prompt2 = _propts2list[randomnumber2];
+            
+
         displayendmessage();
     }
 }
