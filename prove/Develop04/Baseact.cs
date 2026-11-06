@@ -9,6 +9,7 @@ class Baseactivity
     public Baseactivity(string name, string description)
     {
         _name = name;
+        _description = description;
     }
 
     public void StartActivity()
@@ -83,6 +84,7 @@ class Baseactivity
     public void WelcomeMessage()
     {
         Console.WriteLine($"Welcome to {_name} activity");
+        Console.WriteLine(_description);
     }
 
     public void displayendmessage()

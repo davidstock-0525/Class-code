@@ -28,6 +28,7 @@ class Program
 
             case "3":
             Listing newListing = new Listing("Listing", "This activity will allow you to list good things about yourself and your life");
+            newListing.runListing();
             break;
         }  
     }
