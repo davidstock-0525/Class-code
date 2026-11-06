@@ -63,6 +63,11 @@ class Baseactivity
         _duration = int.Parse(Console.ReadLine());
     }
 
+    public int getDuration()
+    {
+        return _duration;
+    }
+
     public bool timerHasExpried()
     {
         if (DateTime.Now > _endTime)

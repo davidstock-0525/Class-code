@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-class Reflection
+class Reflection:Baseactivity
 {
     private string _prompt1;
     private string _prompt2;
@@ -14,7 +14,8 @@ class Reflection
     "What could you learn from this experience that applies to other situations?",
     "What did you learn about yourself through this experience?","How can you keep this experience in mind in the future?"};
 
-    public Reflection()
+    public Reflection(string name = "Reflection", string description = "Spend some time thinking of an imporant moment in your life")
+    :base(name, description)
     {
         Random random = new Random();
         int randomnumber = random.Next(_prompts1list.Count);
@@ -22,5 +23,14 @@ class Reflection
         Random random2 = new Random();
         int randomnumber2 = random2.Next(_propts2list.Count);
         _prompt2 = _propts2list[randomnumber2];
+    }
+
+    public void runreflection()
+    {
+        WelcomeMessage();
+        setDuration();
+        RunCountDownMessage(_prompt1, 5);
+        displayspinnermessage(_prompt2, getDuration());
+        displayendmessage();
     }
 }
