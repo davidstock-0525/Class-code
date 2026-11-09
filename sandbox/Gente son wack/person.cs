@@ -13,7 +13,7 @@ class Person
         _weight = weight;
     }
 
-    public string getinfo()
+    public virtual string getinfo()
     {
         string info = ($"{_fristName} {_lastName} weighs {_weight} and is {_age} years old");
         return info;

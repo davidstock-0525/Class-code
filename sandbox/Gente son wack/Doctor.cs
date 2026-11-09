@@ -8,9 +8,9 @@ class Doctor : Person
         _tools = tools;
     }
 
-    public string getdoctorinfo()
+    public override string getinfo()
     {
-        string info = ($"{_tools},{getinfo()}");
+        string info = ($"{_tools},{base.getinfo()}");
         return info;
     }
 }

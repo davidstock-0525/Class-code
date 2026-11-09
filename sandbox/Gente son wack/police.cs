@@ -8,9 +8,9 @@ class Police: Person
         _weapons = weapons;
     }
 
-    public string getpoliceinfo()
+    public override string getinfo()
     {
-        string info = ($"{_weapons},{getinfo()}");
+        string info = ($"{_weapons},{base.getinfo()}");
         return info;
     }
 }

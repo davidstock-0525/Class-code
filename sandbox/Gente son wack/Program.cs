@@ -2,18 +2,18 @@
 {
     static void Displaypersoninformation(Person person)
     {
-        if(person is Doctor d)
-        {
-            Console.WriteLine(d.getdoctorinfo());
-        }
-        else if(person is Police p)
-        {
-            Console.WriteLine(p.getpoliceinfo());
-        }
-        else
-        {
+        // if(person is Doctor d)
+        // {
+        //     Console.WriteLine(d.getinfo());
+        // }
+        // else if(person is Police p)
+        // {
+        //     Console.WriteLine(p.getinfo());
+        // }
+        // else
+        // {
             Console.WriteLine(person.getinfo());
-        }
+        //}
 
     }
     static void Main()
