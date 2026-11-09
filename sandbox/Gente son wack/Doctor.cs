@@ -13,4 +13,9 @@ class Doctor : Person
         string info = ($"{_tools},{base.getinfo()}");
         return info;
     }
+
+    public override double getsalary()
+    {
+        return 35000.00;
+    }
 }

@@ -12,13 +12,14 @@
         // }
         // else
         // {
+            Console.Write($"Salary: {person.getsalary()}");
             Console.WriteLine(person.getinfo());
         //}
 
     }
     static void Main()
     {
-        Person myPerson = new Person("Ryan", "stiller", 32, 210);
+        //Person myPerson = new Person("Ryan", "stiller", 32, 210);
         //Console.WriteLine(myPerson.getinfo());
 
         Police myPolice = new Police("Lance", "Bob", 34, 186, "taser");
@@ -33,7 +34,7 @@
 
         myPeople.Add(myDoctor);
         myPeople.Add(myPolice);
-        myPeople.Add(myPerson);
+        //myPeople.Add(myPerson);
 
         foreach (Person person in myPeople)
         {

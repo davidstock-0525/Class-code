@@ -1,4 +1,4 @@
-class Person
+abstract class Person
 {
     private string _fristName;
     private string _lastName;
@@ -18,4 +18,6 @@ class Person
         string info = ($"{_fristName} {_lastName} weighs {_weight} and is {_age} years old");
         return info;
     }
+
+    public abstract double getsalary();
 }
