@@ -11,16 +11,16 @@ class Basegoal
     private string _type;
     public Basegoal()
     {
-        GetGoalName();
+        SetGoalName();
     }
 
-    private void GetGoalName()
+    private void SetGoalName()
     {
         Console.WriteLine("Please enter the name of your goal ");
         _name = Console.ReadLine();
     }
 
-    public string GetOutput()
+    public string GetConsoleOutput()
     {
         return $"Goal name: {_name}";
     }
