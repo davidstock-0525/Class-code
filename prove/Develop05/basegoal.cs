@@ -12,6 +12,8 @@ class Basegoal
     public Basegoal()
     {
         SetGoalName();
+        SetDescription();
+        SetPoints();
     }
 
     private void SetGoalName()
@@ -23,5 +25,17 @@ class Basegoal
     public string GetConsoleOutput()
     {
         return $"Goal name: {_name}";
+    }
+
+    private void SetDescription()
+    {
+        Console.WriteLine("PLease describe your goal ");
+        _description = Console.ReadLine();
+    }
+
+    private void SetPoints()
+    {
+        Console.WriteLine("How many points is it worth? ");
+        _pointValue = int.Parse(Console.ReadLine());
     }
 }
