@@ -3,6 +3,7 @@ using System.Diagnostics;
 class Menu
 {
     private string _choice;
+    private Goals _goallist = new Goals();
 
     public Menu()
     {
@@ -21,9 +22,15 @@ class Menu
             case "1":
                 MenuTwo();
                 break;
+
+            case "2":
+                Console.WriteLine("Which goal would you like to record? ");
+                foreach (Basegoal item in _goallist.Getlist())
+                break;
         }
 
     }
+
 
     public void MenuTwo()
     {
@@ -37,7 +44,7 @@ class Menu
         {
             case "1":
                 Simplegoal tempsimp = new Simplegoal();
-
+                goallist.AddGoal(tempsimp);
                 break;
         }
     }
