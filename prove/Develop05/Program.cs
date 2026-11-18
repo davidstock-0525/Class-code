@@ -4,7 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Basegoal test = new Basegoal();
-        Console.WriteLine(test.GetConsoleOutput());
+        Simplegoal mySimple = new Simplegoal();
+        Console.WriteLine(mySimple.GetConsoleOutput());
+        mySimple.Markcomplete();
+        Console.WriteLine(mySimple.GetConsoleOutput());
     }
 }
