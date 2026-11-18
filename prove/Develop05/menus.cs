@@ -16,10 +16,30 @@ class Menu
         Console.WriteLine("4. Load goals");
         _choice = Console.ReadLine();
 
-        Switch _choice;
+        switch (_choice)
+        {
+            case "1":
+                MenuTwo();
+                break;
+        }
 
-            Case "1";
-            break;
+    }
+
+    public void MenuTwo()
+    {
+        Console.WriteLine("What kind of goal would you like to make? ");
+        Console.WriteLine("1. Simple");
+        Console.WriteLine("2. Checklist ");
+        Console.WriteLine("3. eternal ");
+        _choice = Console.ReadLine();
+
+        switch (_choice)
+        {
+            case "1":
+                Simplegoal tempsimp = new Simplegoal();
+
+                break;
+        }
     }
 
      
