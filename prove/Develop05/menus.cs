@@ -5,6 +5,7 @@ class Menu
     private string _choice;
     private Goals _goallist = new Goals();
     private int _iteration;
+    private int _totalpoints;
 
     public Menu()
     {
@@ -12,6 +13,7 @@ class Menu
     public void MenuOne()
     {
         _iteration = 0;
+        Console.WriteLine($"You have {_totalpoints}");
         Console.WriteLine("What would you like to do? ");
         Console.WriteLine("1. Create goal");
         Console.WriteLine("2. Record event");
@@ -33,7 +35,16 @@ class Menu
                    item.SetGoalNumber(_iteration);
                    Console.WriteLine(item.GetConsoleOutput());
                 }
-                Console.ReadLine();
+                int index = 0;
+                index = int.Parse(Console.ReadLine());
+                foreach (Basegoal item in _goallist.Getlist())
+                {
+                    if(index == item.GetGoalNumber())
+                    {
+                        _totalpoints += item.RecordEvent();
+                    }
+                }
+
                 break;
         }
 
@@ -68,7 +79,7 @@ class Menu
         switch("choice")
         {
             case "1":
-            
+
 
         }
     }
