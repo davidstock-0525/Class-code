@@ -1,4 +1,5 @@
 using System.Diagnostics.Contracts;
+using System.Xml.Serialization;
 
 abstract class Basegoal
 {
@@ -14,6 +15,7 @@ abstract class Basegoal
         SetGoalName();
         SetDescription();
         SetPoints();
+        SetGoalType();
         _isComplete = false;
     }
 
@@ -70,6 +72,37 @@ abstract class Basegoal
     public void SetGoalNumber(int goalnumber)
     {
         _goalNumber = goalnumber;
+    }
+
+    public void SetGoalType()
+    {
+        string choice = "0";
+        Console.WriteLine("What type of goal is this? ");
+        Console.WriteLine("1. Phyical");
+        Console.WriteLine("2. spritual ");
+        Console.WriteLine("3. social ");
+        Console.WriteLine("4. intellectual ");
+         Console.ReadLine();
+        switch(choice)
+        {
+            case "1":
+                _type = "Physical";
+                break;
+            
+            case "2":
+                _type = "spritual";
+                break;
+            
+            case "3":
+                _type = "social";
+                break;
+
+            case "4":
+                _type = "intellectual";
+                break;
+            
+
+        }
     }
     
 }

@@ -32,8 +32,8 @@ class Menu
                    _iteration += 1; 
                    item.SetGoalNumber(_iteration);
                    Console.WriteLine(item.GetConsoleOutput());
-                   Console.ReadLine();
                 }
+                Console.ReadLine();
                 break;
         }
 
@@ -54,6 +54,22 @@ class Menu
                 Simplegoal tempsimp = new Simplegoal();
                 _goallist.AddGoal(tempsimp);
                 break;
+        }
+    }
+
+    public void Menuthree()
+    {
+        Console.WriteLine("What type of goal is this? ");
+        Console.WriteLine("1. Phyical");
+        Console.WriteLine("2. spritual ");
+        Console.WriteLine("3. social ");
+        Console.WriteLine("4. intellectual ");
+        _choice = Console.ReadLine();
+        switch("choice")
+        {
+            case "1":
+            
+
         }
     }
 
