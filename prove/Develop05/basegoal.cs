@@ -66,5 +66,10 @@ abstract class Basegoal
     {
         
     }
+
+    public void SetGoalNumber(int goalnumber)
+    {
+        _goalNumber = goalnumber;
+    }
     
 }

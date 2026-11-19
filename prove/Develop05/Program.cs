@@ -4,9 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Simplegoal mySimple = new Simplegoal();
-        Console.WriteLine(mySimple.GetConsoleOutput());
-        mySimple.Markcomplete();
-        Console.WriteLine(mySimple.GetConsoleOutput());
+        Menu myMenu = new Menu();
+        bool running = true;
+        while(running == true)
+        {
+            myMenu.MenuOne();
+        }
     }
 }
