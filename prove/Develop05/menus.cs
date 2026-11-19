@@ -31,7 +31,8 @@ class Menu
                 {
                    _iteration += 1; 
                    item.SetGoalNumber(_iteration);
-                   item.GetConsoleOutput();
+                   Console.WriteLine(item.GetConsoleOutput());
+                   Console.ReadLine();
                 }
                 break;
         }
