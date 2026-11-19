@@ -74,6 +74,11 @@ abstract class Basegoal
         _goalNumber = goalnumber;
     }
 
+    public int GetGoalNumber()
+    {
+        return _goalNumber;
+    }
+
     public void SetGoalType()
     {
         string choice = "0";
@@ -104,5 +109,6 @@ abstract class Basegoal
 
         }
     }
+
     
 }
