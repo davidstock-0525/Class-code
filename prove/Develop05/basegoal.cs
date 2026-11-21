@@ -41,7 +41,7 @@ abstract class Basegoal
        string completeString = " ";
        if(_isComplete)
             completeString = "X";
-        return $"{_goalNumber}. [{completeString}] - {_type}, Goal name: {_name}, Description: {_description}, Points: {_pointValue}";
+        return $"{_goalNumber}. [{completeString}] - {_type}, Goal name: {_name}, Description: {_description}, type: {_type} Points: {_pointValue}";
     }
 
     private void SetDescription()
@@ -87,7 +87,7 @@ abstract class Basegoal
         Console.WriteLine("2. spritual ");
         Console.WriteLine("3. social ");
         Console.WriteLine("4. intellectual ");
-         Console.ReadLine();
+        choice = Console.ReadLine();
         switch(choice)
         {
             case "1":
@@ -108,6 +108,11 @@ abstract class Basegoal
             
 
         }
+    }
+
+    public bool CheckComplete()
+    {
+        return _isComplete;
     }
 
     

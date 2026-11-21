@@ -42,7 +42,14 @@ class Menu
                 {
                     if(index == item.GetGoalNumber())
                     {
-                        _totalpoints += item.RecordEvent();
+                        if (item.CheckComplete() == false)
+                        {
+                            _totalpoints += item.RecordEvent();
+                        }
+                        else
+                        {
+                            Console.WriteLine("This goal has been completed");
+                        }
                     }
                 }
                 break;
@@ -66,20 +73,22 @@ class Menu
                     
                     while ((line = inputfile.ReadLine()) != null)
                     {
+
                         string[] parts = line.Split('#');
-                        if(parts[4] == "simple")
+                        if(parts[5] == "simple")
                         {
                             Simplegoal tempsimp = new Simplegoal(parts[0],parts[1],int.Parse(parts[2]),bool.Parse(parts[3]),parts[4],parts[5],int.Parse(parts[6]));
                             _goallist.AddGoal(tempsimp);
                         }
-                        else if (parts[4] == "checklist")
+                        else if (parts[5] == "Checklist")
                         {
                             Checklist tempcheck = new Checklist(parts[0],parts[1],int.Parse(parts[2]),bool.Parse(parts[3]),parts[4],parts[5],int.Parse(parts[6]),int.Parse(parts[7]),int.Parse(parts[8]),int.Parse(parts[9]));
                             _goallist.AddGoal(tempcheck);
                         }
-                        else if (parts[4] == "Eternal")
+                        else if (parts[5] == "Eternal")
                         {
-                            Eternal tempEnter = new Eternal(parts[0],parts[1],int.Parse(parts[2]),bool.Parse(parts[3]),parts[4],parts[5],int.Parse(parts[6]), int.Parse(parts[7]));
+                            Eternal tempEnter = new Eternal(parts[0],parts[1],int.Parse(parts[2]),bool.Parse(parts[3]),parts[4],parts[5],int.Parse(parts[6]));
+                            _goallist.AddGoal(tempEnter);
                             
                         }
                     }
