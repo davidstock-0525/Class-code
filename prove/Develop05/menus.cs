@@ -44,8 +44,36 @@ class Menu
                         _totalpoints += item.RecordEvent();
                     }
                 }
-
                 break;
+
+            case "3":
+            using (StreamWriter outputFile = new StreamWriter("goals.txt"))
+            {
+                outputFile.WriteLine(_totalpoints);
+                foreach (Basegoal item in _goallist.Getlist())
+                {
+                    outputFile.WriteLine(item.SavetoFileString());
+                }
+            }
+            break;
+
+            case "4":
+            using (StreamReader inputfile = new StreamReader("goals.txt"))
+                {
+                    _totalpoints = int.Parse(inputfile.ReadLine());
+                    string line; 
+                    
+                    while ((line = inputfile.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split('#');
+                        if(parts[6] == "simple")
+                        {
+                            Simplegoal tempsimp = new Simplegoal(parts[0],parts[1],int.Parse(parts[2]),bool.Parse(parts[3]),parts[4],parts[5],int.Parse(parts[6]));
+                            _goallist.AddGoal(tempsimp);
+                        }
+                    }
+                }
+            break;
         }
 
     }

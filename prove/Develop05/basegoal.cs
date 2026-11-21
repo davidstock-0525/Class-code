@@ -16,6 +16,7 @@ abstract class Basegoal
         SetDescription();
         SetPoints();
         SetGoalType();
+        _focus = "simple";
         _isComplete = false;
     }
 
@@ -64,9 +65,9 @@ abstract class Basegoal
 
     public abstract int RecordEvent();
 
-    public void SavetoFileString()
+    public string SavetoFileString()
     {
-        
+        return($"{_name}#{_description}#{_pointValue}#{_isComplete}#{_type}#{_focus}#{_goalNumber}");
     }
 
     public void SetGoalNumber(int goalnumber)
