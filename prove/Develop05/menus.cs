@@ -101,6 +101,10 @@ class Menu
                    Console.WriteLine(item.GetConsoleOutput());
                 }
             break;
+
+            default:
+                Console.WriteLine("Invaild input, please enter 1-4");
+                break;
         }
 
     }
@@ -129,6 +133,10 @@ class Menu
             case "3":
                 Eternal tempEter = new Eternal();
                 _goallist.AddGoal(tempEter);
+                break;
+
+            default:
+                Console.WriteLine("Invaild input. please enter 1-3");
                 break;
         }
     }   

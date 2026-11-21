@@ -41,7 +41,7 @@ abstract class Basegoal
        string completeString = " ";
        if(_isComplete)
             completeString = "X";
-        return $"{_goalNumber}. [{completeString}] - {_type}, Goal name: {_name}, Description: {_description}, type: {_type} Points: {_pointValue}";
+        return $"{_goalNumber}. [{completeString}] - {_type}, Goal name: {_name}, Description: {_description}, type: {_type}, Points: {_pointValue}";
     }
 
     private void SetDescription()
@@ -104,6 +104,9 @@ abstract class Basegoal
 
             case "4":
                 _type = "intellectual";
+                break;
+            default:
+                Console.WriteLine("Invaild input. Plesae enter 1-4");
                 break;
             
 

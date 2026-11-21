@@ -47,6 +47,6 @@ class Checklist:Basegoal
        string completeString = " ";
        if(_isComplete)
             completeString = "X";
-        return $"{_goalNumber}. [{completeString}] - {_type}, Goal name: {_name}, Description: {_description}, type: {_type} Points: {_pointValue}, Points once done: {_repetionPoints} [{_repetionComplete}/{_repetions}]";
+        return $"{_goalNumber}. [{completeString}] - {_type}, Goal name: {_name}, Description: {_description}, type: {_type}, Points: {_pointValue}, Points once done: {_repetionPoints} [{_repetionComplete}/{_repetions}]";
     }
 }
