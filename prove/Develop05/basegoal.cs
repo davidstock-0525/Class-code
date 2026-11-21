@@ -3,13 +3,13 @@ using System.Xml.Serialization;
 
 abstract class Basegoal
 {
-    private int _pointValue;
-    private bool _isComplete;
-    private int _goalNumber;
-    private string _name;
-    private string _description;
-    private string _type;
-    private string _focus;
+    protected int _pointValue;
+    protected bool _isComplete;
+    protected int _goalNumber;
+    protected string _name;
+    protected string _description;
+    protected string _type;
+    protected string _focus;
     public Basegoal()
     {
         SetGoalName();
@@ -64,7 +64,7 @@ abstract class Basegoal
 
     public abstract int RecordEvent();
 
-    public string SavetoFileString()
+    public virtual string SavetoFileString()
     {
         return($"{_name}#{_description}#{_pointValue}#{_isComplete}#{_type}#{_focus}#{_goalNumber}");
     }

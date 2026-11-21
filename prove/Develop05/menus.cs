@@ -67,12 +67,29 @@ class Menu
                     while ((line = inputfile.ReadLine()) != null)
                     {
                         string[] parts = line.Split('#');
-                        if(parts[6] == "simple")
+                        if(parts[4] == "simple")
                         {
                             Simplegoal tempsimp = new Simplegoal(parts[0],parts[1],int.Parse(parts[2]),bool.Parse(parts[3]),parts[4],parts[5],int.Parse(parts[6]));
                             _goallist.AddGoal(tempsimp);
                         }
+                        else if (parts[4] == "checklist")
+                        {
+                            Checklist tempcheck = new Checklist(parts[0],parts[1],int.Parse(parts[2]),bool.Parse(parts[3]),parts[4],parts[5],int.Parse(parts[6]),int.Parse(parts[7]),int.Parse(parts[8]),int.Parse(parts[9]));
+                            _goallist.AddGoal(tempcheck);
+                        }
+                        else if (parts[4] == "Eternal")
+                        {
+                            Eternal tempEnter = new Eternal(parts[0],parts[1],int.Parse(parts[2]),bool.Parse(parts[3]),parts[4],parts[5],int.Parse(parts[6]), int.Parse(parts[7]));
+                            
+                        }
                     }
+                }
+                Console.WriteLine("Which goal would you like to record? ");
+                foreach (Basegoal item in _goallist.Getlist())
+                {
+                   _iteration += 1; 
+                   item.SetGoalNumber(_iteration);
+                   Console.WriteLine(item.GetConsoleOutput());
                 }
             break;
         }
@@ -99,24 +116,11 @@ class Menu
                 Checklist tempcheck = new Checklist();
                 _goallist.AddGoal(tempcheck);
                 break;
+            
+            case "3":
+                Eternal tempEter = new Eternal();
+                _goallist.AddGoal(tempEter);
+                break;
         }
-    }
-
-    public void Menuthree()
-    {
-        Console.WriteLine("What type of goal is this? ");
-        Console.WriteLine("1. Phyical");
-        Console.WriteLine("2. spritual ");
-        Console.WriteLine("3. social ");
-        Console.WriteLine("4. intellectual ");
-        _choice = Console.ReadLine();
-        switch("choice")
-        {
-            case "1":
-
-
-        }
-    }
-
-     
+    }   
 }
