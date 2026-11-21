@@ -4,6 +4,7 @@ class Checklist:Basegoal
     private int _repetionComplete;
     private int _repetionPoints;
     public Checklist()
+    :base()
     {
         Console.WriteLine("How many times should this goal repeat");
         _repetions = int.Parse(Console.ReadLine());
@@ -11,6 +12,8 @@ class Checklist:Basegoal
         _repetionPoints = int.Parse(Console.ReadLine());
         
     }
+
+   
     
     public override int RecordEvent()
     {

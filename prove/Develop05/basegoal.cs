@@ -16,7 +16,6 @@ abstract class Basegoal
         SetDescription();
         SetPoints();
         SetGoalType();
-        _focus = "simple";
         _isComplete = false;
     }
 
