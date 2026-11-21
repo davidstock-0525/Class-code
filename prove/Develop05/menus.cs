@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Diagnostics;
 
 class Menu
@@ -92,6 +93,11 @@ class Menu
             case "1":
                 Simplegoal tempsimp = new Simplegoal();
                 _goallist.AddGoal(tempsimp);
+                break;
+            
+            case "2":
+                Checklist tempcheck = new Checklist();
+                _goallist.AddGoal(tempcheck);
                 break;
         }
     }
